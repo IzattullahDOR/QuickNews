@@ -7,6 +7,8 @@ export default function App() {
       <Text>Open up Don</Text>
       <Text>This is second Text</Text>
       <Text>This is third Text</Text>
+      <Text>This is third Text</Text>
+      <Text>Last Text</Text>
       <StatusBar style="auto" />
     </View>
   );
