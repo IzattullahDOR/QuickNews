@@ -1,32 +1,17 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Etusivu!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Tuoreimmat!</Text>
-    </View>
-  );
-}
-
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
+import HomeScreen from './components/HomeScreen';
+import BreakingNews from './components/BreakingNews';
+import SavedNews from './components/SavedNews';
+const Tab = createBottomTabNavigator();
+  
+export default function App() {
+  return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Etusivu" component={HomeScreen} />
-        <Tab.Screen name="Tuoreimmat" component={SettingsScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Tuoreimmat" component={BreakingNews} />
+        <Tab.Screen name="Tallennetut" component={SavedNews} />
       </Tab.Navigator>
     </NavigationContainer>
   );
